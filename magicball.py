@@ -30,9 +30,11 @@ result = responses[choice_index]
 
 def magic_ball():
     question = input(("Welcome, wayward soul. Ask the Magic 8 Ball a Question and Learn Your Future: \n"))
+    print("Thinking...")
+    time.sleep(4)
     player_question = str(question)
     if len(player_question) > 0:
-        print(result)
+        print(f"Magic 8 Ball Says: {result}")
         play_again = input(("Do you want to play again? Press 'Y' for 'Yes' or 'X' to exit \n")).capitalize()
         if play_again == "Y":
             magic_ball()
